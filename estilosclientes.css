@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  .main img{
+
+    max-width: 80%;
+}
+
+.contenedor{
+    width: 100%;
+	margin: auto;
+ 
+}
+
+/*---------Estilos del Header---------------*/
+.header {
+  height: 60px;
+    background: #333;
+}
+.header .contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+.logo, .icon-menu {
+  margin: 5px;
+  color: #fff;
+}
+.icon-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: rgb(153, 153, 153);
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.nav {
+  position: absolute;
+  top: 60px;
+  left: -100%;  
+  width: 100%;
+  transition: all 0.5s;
+   	z-index: 100;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+    height: 60px; 
+}
+.menu__link {
+  display: block;
+  padding: 15px;
+ background: rgba(154, 156, 147, 0.9);
+  text-decoration: none;
+  color: #fff; 
+     height: 60px;
+	border-bottom: 1px solid #999;
+}
+.menu__link:hover {
+  background: white;
+  color: #000;  
+}
+.muestrate{
+ left: 0;
+}
+
+
+/*-------Estilos del Banner-----*/
+.banner img{
+    width: 100%;
+   
+}
+.banner {
+   position: relative;
+		
+}
+.banner .contenedor{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+		
+}
+
+.racing-section{
+	padding:4em 0;
+	text-align: center;
+}
+.racing-section h3 {
+    font-size: 3em;
+    text-transform: capitalize;
+    color: #333033;
+    font-family: 'ContrailOne-Regular';
+      margin-bottom: .5em;
+}
+.racing-grid {
+  padding: 1em;
+}
+a.mask {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+}
+img.zoom-img {
+  -webkit-transform: scale(1, 1);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 250ms;
+  -moz-transform: scale(1, 1);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 250ms;
+}
+img.zoom-img:hover {
+  -webkit-transform: scale(1.1);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 750ms;
+  -moz-transform: scale(1.1);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 750ms;
+  overflow: hidden;
+}
+/*-------Estilos de Info------*/
+ .info{
+    background: #333;
+    color:black;
+    text-align: center;
+     margin-top: -50px; 
+    
+}
+ .info__img{
+    border-radius: 50%;
+    border: 7px solid #444; 
+    position: relative;
+     
+    
+}
+.info__txt{
+    text-align: justify;
+    padding: 15px;
+}
+@media(min-width:480px){
+    .main img{
+    max-width: 90%;
+}
+    .contenedor .banner__titulo{
+        font-size: 44px;
+    }
+    .contenedor .banner__txt{
+        font-size: 25px;   
+    }
+	.info__columna{
+        width: 32%;
+    }
+     .info .contenedor{
+    display: flex;
+		 justify-content: space-between;
+		 
+    }
+    @media(min-width:1024px){
+        .nav {
+        position: static;
+        width: auto;
+      }
+      .menu {
+        display: flex;
+      }
+      .icon-menu {
+        display: none;
+      }
+        .menu__link{
+            border: none;
+        }
+        .banner .contenedor .banner__titulo{
+            font-size: 50px;  
+        }
+         .banner .contenedor .banner__txt{
+            font-size: 36px; 
+        }
+        .contenedor{
+            width:1000px;
+        }
+       
+    }
+    @media(min-width:1280px){
+        .contenedor{
+            width: 1200px;
+        }
+         .banner .contenedor .banner__titulo{
+            font-size: 90px; 
+            
+        }
+         .banner .contenedor .banner__txt{
+            font-size: 46px; 
+        }
+        .racing-grid {
+          float: left;
+          width: 33.3%;
+      } 
+        
+    }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .galeria {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .racing-grid {
+    float: left;
+    width: 33.3%;
+}
+  
+  .galeria__item {
+    width: 80%;
+    cursor: pointer;
+  }
+  @media (min-width:480px) {
+    .galeria__item {
+      width: 48%;
+      margin: 5px;
+    }
+    .racing-grid {
+      float: left;
+      width: 33.3%;
+  }
+  }
+  @media (min-width:768px) {
+    .galeria__item {
+      width: 30%;
+    }
+  }
+  @media (min-width:1024px) {
+    .galeria__item {
+      width: 20%;
+      margin: 15px;
+    }
+  }
+  
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal__img {
+    width: 70%;
+    max-width: 700px;
+  }
+  
+  .modal__boton {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: monospace;
+    line-height: 50px;
+    text-align: center;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+  .formulario {
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .formulario__titulo {
+    text-align: center;
+    margin-top: 0;
+    color: rgba(0,0,0,0.7);
+  }
+  .formulario__input, .formulario__label, .formulario__submit {
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+  }
+  .formulario__input {
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+  }
+  .formulario__input:focus {
+    outline: 1px solid rgba(0,0,0,0.7);
+  }
+  .formulario__input:focus + .formulario__label{
+    margin-top: -135px;
+  }
+  .formulario__label {
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -85px;
+    z-index: -20;
+    color: rgba(0,0,0,0.5);
+    transition: all 0.2s;
+  }
+  .formulario__submit {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+  }
+  .fijar {
+    margin-top: -135px;
+  }
+  .racing-grid {
+    float: left;
+    width: 33.3%;
+}
